@@ -16,7 +16,7 @@ export const robots = [
       name: 'Clementine Bauch',
       username: 'Samantha',
       email: 'Nathan@yesenia.net'
-    },
+    }, 
     {
       id: 4,
       name: 'Patricia Lebsack',

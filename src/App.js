@@ -10,6 +10,6 @@ const App=()=>{
             <SearchBox />
             <CardList robots={robots}/>
         </div>
-    );
+    ); 
 }
 export default App;
