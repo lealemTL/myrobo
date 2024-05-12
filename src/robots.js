@@ -4,7 +4,7 @@ export const robots = [
       name: 'Leanne Graham',
       username: 'Bret',
       email: 'Sincere@april.biz'
-    },
+    }, 
     {
       id: 2,
       name: 'Ervin Howell',
