@@ -9,7 +9,7 @@ const state = {
 }
 class App extends Component{
     constructor(){
-        this.state
+        // this.state
     }
     render(){
         return (
