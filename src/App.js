@@ -16,15 +16,8 @@ class App extends Component{
 
     componentDidMount(){
         fetch('https://jsonplaceholder.typicode.com/users')
-        .then(
-            responce=>{
-               return responce.json();
-            }
-        ).then(
-            users=>{
-                this.setState({robots:users})
-            }
-        );
+        .then(responce=> responce.json())
+        .then(users=>this.setState({robots:users}));
     }
     onSearchCange = (event)=>{
 
