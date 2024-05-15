@@ -2,9 +2,9 @@ import React ,{ Component }from "react";
 import CardList from "../components/CardList";
 import SearchBox from '../components/SearchBox';
 import Scroll from '../containers/Scroll';
-//import { robots } from "./robots";
+import ErrorBoundry from '../components/ErrorBoundry';
 import '../components/App.css';
-
+ 
 class App extends Component{
     constructor(){
         super()
@@ -29,14 +29,16 @@ class App extends Component{
             return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })
         if(this.state.robots.length ===0){
-            return <h1 className="f2 sega-font tc">Loading</h1>
+            return <h1 className="f2 tc">Loading</h1>
         }else{
             return (
         <div className="tc">
             <h1 className="f2 sega-font">My Robots</h1>
             <SearchBox searchChange={this.onSearchCange}/>
             <Scroll>
-                <CardList robots={filterRobots}/>
+                <ErrorBoundry>
+                    <CardList robots={filterRobots}/>
+                </ErrorBoundry>
             </Scroll>
              
         </div> 
